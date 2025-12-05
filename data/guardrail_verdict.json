@@ -1,0 +1,57 @@
+{
+  "NOVA": {
+    "direction": "LONG",
+    "pm_narrative": "\n\n### 3.2 Long Thesis, Mispricing, Margin of Safety, and Conviction\nThe core long thesis on ACME remains valid on a 3-year horizon driven by secular AI adoption. However, the current proposed sizing and high 1.4 Beta suggest the majority of the risk budget is being used for high-growth factor exposure rather than idiosyncratic alpha. The conviction is Medium-High (4.0), but fragile, as any shift in the momentum factor regime could lead to a sharp, factor-driven drawdown inconsistent with the idiosyncratic view. The proposal is currently under-budgeted for idiosyncratic risk and over-budgeted for factor risk.\n\n### 3.4 Risk Units, Sizing, and Portfolio Fit\nThe proposed $5.0M notional size is inefficient. Given the high volatility (35%) and Beta (1.4), this concentration significantly worsens our existing Growth/Momentum factor exposure. We require a **40% reduction in notional** to de-risk the factor exposure and bring the position into alignment with a volatility-targeted 0.8% VaR contribution. The position *worsens_growth_concentration* and requires immediate adjustment.\n\n### 3.7 One-Minute, 5-Bullet Executive Summary (Mandatory)\n1. **Thesis & edge:** Strong secular growth, but high factor tilt masks true alpha.\n2. **Conviction:** Medium-High (4.0), but *fragile* due to crowding. Upside 40%, Downside 15%.\n3. **Risk size & portfolio impact:** Proposed size is too large. Worsens Growth factor concentration.\n4. **Key catalysts:** Q4 Earnings (immediate check) and Analyst Day.\n5. **Decision & immediate action:** **GUARDRAIL FAIL**. Approve at reduced size only.\n",
+    "json_verdict": {
+      "ticker": "NOVA",
+      "direction": "LONG",
+      "conviction_score": 4.0,
+      "conviction_label": "high",
+      "decision": "GUARDRAIL_FAIL",
+      "expected_upside_pct": 40.0,
+      "expected_downside_pct": 15.0,
+      "risk_target_bps": 80,
+      "risk_target_vol_contribution_pct": 0.8,
+      "portfolio_impact": "worsens_growth_concentration",
+      "alpha_vs_factor_grade": "fail_factor_dominated",
+      "factor_risk_share_pct": 55.0,
+      "idiosyncratic_risk_share_pct": 45.0,
+      "sizing_efficiency_loss_pct": 25.0,
+      "factor_concentration_flag": true,
+      "crowding_flag": true,
+      "implementation_recommendation": "reduce_size_by_40_percent_to_mitigate_factor_risk"
+    },
+    "guardrail_check": {
+      "status": "HARD_FAIL",
+      "message": "PM Agent REJECTED/PASSED trade. Decision: GUARDRAIL_FAIL.",
+      "reason": "PM agent explicitly vetoed the trade on qualitative/implementation grounds."
+    }
+  },
+  "GLOX": {
+    "direction": "SHORT",
+    "pm_narrative": "\n### 3.2 Short Thesis, Mispricing, and Conviction\nThe Short thesis on BAUX is fundamentally sound, driven by cyclical peak and financial execution issues. However, the estimated idiosyncratic alpha is low, meaning the expected return is highly reliant on a macro factor (cyclicals/global growth). More critically, the **Borrow Cost (4% annualized)** represents a significant drag that could fully erode the thin alpha edge if the position is held longer than 9 months without the expected catalyst (legal judgment). The risk/reward asymmetry is poor on an implementation basis.\n\n### 3.4 Risk Units, Sizing, and Portfolio Fit\nThe proposed size is reasonable on volatility, but the high **cost of carry** (4% borrow) makes this trade uneconomical relative to the expected edge. This short uses up precious borrow allocation for a factor-dominated trade, which is against the PM's rule to treat the short book as an *independent alpha engine*. The idiosyncratic alpha needs to be significantly higher to justify the cost/risk.\n\n### 3.7 One-Minute, 5-Bullet Executive Summary (Mandatory)\n1. **Thesis & edge:** Sound cyclical peak view, but edge is low and highly macro-dependent.\n2. **Conviction & asymmetry:** Low (2.5), primarily due to poor implementation economics. Downside 30%, Upside (Loss) 10%.\n3. **Risk size & portfolio impact:** Uses borrow budget for a factor-dominated, low-alpha trade.\n4. **Key catalysts:** Q2 Legal Judgment (Too distant given high borrow cost).\n5. **Decision & immediate action:** **PASS/REJECT**. Not economical for the short book.\n",
+    "json_verdict": {
+      "ticker": "GLOX",
+      "direction": "SHORT",
+      "conviction_score": 2.5,
+      "conviction_label": "low",
+      "decision": "PASS/REJECT",
+      "risk_target_bps": 50,
+      "risk_target_vol_contribution_pct": 0.6,
+      "portfolio_impact": "uses_expensive_borrow_for_low_alpha",
+      "alpha_vs_factor_grade": "fail_factor_dominated",
+      "factor_risk_share_pct": 70.0,
+      "idiosyncratic_risk_share_pct": 30.0,
+      "sizing_efficiency_loss_pct": 0.0,
+      "factor_concentration_flag": false,
+      "crowding_flag": false,
+      "borrow_risk_flag": true,
+      "implementation_recommendation": "pass_due_to_borrow_cost_vs_alpha"
+    },
+    "guardrail_check": {
+      "status": "HARD_FAIL",
+      "message": "PM Agent REJECTED/PASSED trade. Decision: PASS/REJECT.",
+      "reason": "PM agent explicitly vetoed the trade on qualitative/implementation grounds."
+    }
+  }
+}

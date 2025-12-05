@@ -1,0 +1,43 @@
+{
+  "NOVA": {
+    "ticker": "NOVA",
+    "direction": "LONG",
+    "overall_ok": false,
+    "guardrail_flags": [
+      "reinforces_existing_quality_growth_tilt",
+      "factor_concentration_risk",
+      "insufficient_explicit_offset_for_added_industrials_nmv",
+      "tariff_risk_underanalyzed"
+    ],
+    "risk_assessment": {
+      "gross_exposure_ok": true,
+      "single_name_volatility_high": true,
+      "factor_risk_dominant": true,
+      "style_tilt_reinforced": true,
+      "portfolio_nmv_impact_not_addressed": true,
+      "tariff_exposure_secondary_but_real": true
+    },
+    "pm_recommendation": "Treat as a second-tier long idea; only add after reducing other quality-growth industrials to keep style tilt and industrial NMV within risk budget, and require a clearer plan for handling tariff downside scenarios."
+  },
+  "GLOX": {
+    "ticker": "GLOX",
+    "direction": "SHORT",
+    "overall_ok": true,
+    "guardrail_flags": [
+      "tariff_headwind_catalyst",
+      "only_partial_offset_to_style_tilt",
+      "book_level_factor_hedging_incomplete"
+    ],
+    "risk_assessment": {
+      "gross_exposure_ok": true,
+      "single_name_volatility_moderate": true,
+      "factor_risk_main_driver": false,
+      "borrow_cost_issue": false,
+      "idiosyncratic_alpha_present": true,
+      "tariff_catalyst_path_defined": true,
+      "nmv_reduction_modest": true
+    },
+    "pm_recommendation": "Approve as a sized, catalyst-driven short that modestly reduces cyclicals NMV and introduces tariff downside exposure, but pair with additional value/cyclical shorts if the goal is to meaningfully balance the portfolio’s quality-growth style tilt."
+  }
+}
+

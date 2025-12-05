@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "llm-quant-guardrail"
+version = "0.1.0"
+description = "Institutional portfolio guardrails for LLM-generated investment ideas, focusing on risk and factor enforcement."
+authors = ["Your Name <you@example.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "llm_quant_guardrail", from = "src"}]
+
+[tool.poetry.dependencies]
+python = ">=3.10"
+# Core dependencies for a real-world LLM integration and structured data validation
+pydantic = "^2.0"
+openai = "^1.0"
+python-dotenv = "^1.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
