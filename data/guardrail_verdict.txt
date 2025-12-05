@@ -4,41 +4,19 @@ QUANT-GUARDRAIL VERDICT REPORT
 TICKER: NOVA (LONG)
 VERDICT: HARD_FAIL
 ----------------------------------------
-Guardrail Message: PM Agent REJECTED/PASSED trade. Decision: GUARDRAIL_FAIL.
+Guardrail Message: PM Agent REJECTED/PASSED trade. Decision: None.
 
 PM AGENT NARRATIVE:
-### 3.2 Long Thesis, Mispricing, Margin of Safety, and Conviction
-The core long thesis on ACME remains valid on a 3-year horizon driven by secular AI adoption. However, the current proposed sizing and high 1.4 Beta suggest the majority of the risk budget is being used for high-growth factor exposure rather than idiosyncratic alpha. The conviction is Medium-High (4.0), but fragile, as any shift in the momentum factor regime could lead to a sharp, factor-driven drawdown inconsistent with the idiosyncratic view. The proposal is currently under-budgeted for idiosyncratic risk and over-budgeted for factor risk.
-
-### 3.4 Risk Units, Sizing, and Portfolio Fit
-The proposed $5.0M notional size is inefficient. Given the high volatility (35%) and Beta (1.4), this concentration significantly worsens our existing Growth/Momentum factor exposure. We require a **40% reduction in notional** to de-risk the factor exposure and bring the position into alignment with a volatility-targeted 0.8% VaR contribution. The position *worsens_growth_concentration* and requires immediate adjustment.
-
-### 3.7 One-Minute, 5-Bullet Executive Summary (Mandatory)
-1. **Thesis & edge:** Strong secular growth, but high factor tilt masks true alpha.
-2. **Conviction:** Medium-High (4.0), but *fragile* due to crowding. Upside 40%, Downside 15%.
-3. **Risk size & portfolio impact:** Proposed size is too large. Worsens Growth factor concentration.
-4. **Key catalysts:** Q4 Earnings (immediate check) and Analyst Day.
-5. **Decision & immediate action:** **GUARDRAIL FAIL**. Approve at reduced size only.
+This is a placeholder PM narrative from the mock LLM backend. In a real setup this would summarize the idea, highlight risks, and explain the guardrail decision.
 
 ========================================
 
 TICKER: GLOX (SHORT)
 VERDICT: HARD_FAIL
 ----------------------------------------
-Guardrail Message: PM Agent REJECTED/PASSED trade. Decision: PASS/REJECT.
+Guardrail Message: PM Agent REJECTED/PASSED trade. Decision: None.
 
 PM AGENT NARRATIVE:
-### 3.2 Short Thesis, Mispricing, and Conviction
-The Short thesis on BAUX is fundamentally sound, driven by cyclical peak and financial execution issues. However, the estimated idiosyncratic alpha is low, meaning the expected return is highly reliant on a macro factor (cyclicals/global growth). More critically, the **Borrow Cost (4% annualized)** represents a significant drag that could fully erode the thin alpha edge if the position is held longer than 9 months without the expected catalyst (legal judgment). The risk/reward asymmetry is poor on an implementation basis.
-
-### 3.4 Risk Units, Sizing, and Portfolio Fit
-The proposed size is reasonable on volatility, but the high **cost of carry** (4% borrow) makes this trade uneconomical relative to the expected edge. This short uses up precious borrow allocation for a factor-dominated trade, which is against the PM's rule to treat the short book as an *independent alpha engine*. The idiosyncratic alpha needs to be significantly higher to justify the cost/risk.
-
-### 3.7 One-Minute, 5-Bullet Executive Summary (Mandatory)
-1. **Thesis & edge:** Sound cyclical peak view, but edge is low and highly macro-dependent.
-2. **Conviction & asymmetry:** Low (2.5), primarily due to poor implementation economics. Downside 30%, Upside (Loss) 10%.
-3. **Risk size & portfolio impact:** Uses borrow budget for a factor-dominated, low-alpha trade.
-4. **Key catalysts:** Q2 Legal Judgment (Too distant given high borrow cost).
-5. **Decision & immediate action:** **PASS/REJECT**. Not economical for the short book.
+This is a placeholder PM narrative from the mock LLM backend. In a real setup this would summarize the idea, highlight risks, and explain the guardrail decision.
 
 ========================================

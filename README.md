@@ -1,6 +1,6 @@
 # llm-quant-guardrail
 
-**Institutional Portfolio Guardrails for LLM Outputs**
+# **Institutional Portfolio Guardrails for LLM Outputs**
 
 This repository implements an “online guardrail” layer for LLM-generated investment proposals. It demonstrates how a seasoned Portfolio Manager (PM) can embed institutional risk practices and quantitative logic directly into an AI workflow, so model outputs are checked for risk-efficiency and basic portfolio constraints before they are trusted or implemented.
 
@@ -25,6 +25,16 @@ The script `src/build_guardrail_dataset.py` scans `data/` for files matching `dr
 
 This JSONL file is suitable as labeled training data for AI models.
 
+---
+
+## Model backends
+
+The guardrail layer does not assume a specific model. In practice, the PM prompts and JSON verdict schema could sit on top of:
+
+- A generic chat model (GPT-style, Anthropic-style, LLaMA-family).
+- A finance-aware LLM tuned on filings, earnings calls, and research.
+- Future “policy” or “risk” models that directly output structured decisions.
+- The repository focuses on the institutional PM logic and machine-readable labels; any suitable LLM backend can be dropped in behind the prompts.
 ---
 
 ## What this demo does

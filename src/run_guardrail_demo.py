@@ -4,13 +4,13 @@ import shutil
 from collections import defaultdict
 from typing import Dict, Any, List
 from pathlib import Path
+from model_backends import call_llm
+
 
 # --- Configuration and File Paths ---
-DESKTOP_DIR = Path.home() / "Desktop"DATA_DIR = "data"
+DATA_DIR = "data"
 PROMPTS_DIR = "prompts"
 DESKTOP_DIR = Path.home() / "Desktop"
-PROMPTS_DIR = 'prompts'
-DATA_DIR = "data"
 #INPUT_IDEAS_FILE = "draft_portfolio_ideas2.md"  # or whatever exact name you use
 LONG_PM_PROMPT_FILE = 'long_pm_system_prompt.md'
 SHORT_PM_PROMPT_FILE = 'short_pm_system_prompt.md'
@@ -112,12 +112,12 @@ def generate_text_report(verdicts: Dict[str, Dict[str, Any]]) -> str:
 
 # --- 2. LLM Simulation (Mock) ---
 
-def mock_llm_call(
-    system_prompt: str,
-    user_query: str,
-    ticker: str,
-    direction: str,
-) -> Dict[str, Any]:
+#def mock_llm_call(
+ #   system_prompt: str,
+  #  user_query: str,
+   # ticker: str,
+    #direction: str,
+#) -> Dict[str, Any]:
     """
     Simulates the call to an LLM agent (e.g., Gemini).
     """
@@ -327,7 +327,7 @@ You are the {direction} PM. Your task is to critique this proposal based on fact
 """
         
         # 1. Simulate LLM Review
-        llm_response = mock_llm_call(system_prompt, user_query, ticker, direction)
+        llm_response = call_llm("mock", system_prompt, user_query)
         
         # 2. Extract and Store Results
         final_verdicts[ticker]['direction'] = direction
