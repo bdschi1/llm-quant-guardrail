@@ -2,6 +2,7 @@
 
 # **Institutional Portfolio Guardrails for LLM Outputs**
 
+This repository aims to turn domain rules into machine-readable labels / filters
 This repository implements an “online guardrail” layer for LLM-generated investment proposals. It demonstrates how a seasoned Portfolio Manager (PM) can embed institutional risk practices and quantitative logic directly into an AI workflow, so model outputs are checked for risk-efficiency and basic portfolio constraints before they are trusted or implemented.
 
 The focus is on clear logic, transparent risk flags, and machine-readable structured output that bridges natural-language analysis and automated risk enforcement.
