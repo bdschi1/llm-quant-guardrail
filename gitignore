@@ -1,137 +1,81 @@
 # ========================================================================
-# OS-SPECIFIC METADATA
+# OS-specific junk
 # ========================================================================
 .DS_Store
 */.DS_Store
-.AppleDouble
-.LSOverride
 Thumbs.db
-Desktop.ini
 
 # ========================================================================
-# PYTHON CORE
+# Python caches and artifacts
 # ========================================================================
 __pycache__/
+*.pyc
+*.pyo
+*.pyd
 *.py[cod]
 *$py.class
-
-# C-extensions
+*.egg-info/
+*.egg
 *.so
 
 # ========================================================================
-# VIRTUAL ENVIRONMENTS
+# Virtual environments
 # ========================================================================
 .venv/
 venv/
 env/
 ENV/
 *.env
-pip-wheel-metadata/
-
-# Poetry / Pipenv / PDM
-.poetry/
-Pipfile.lock
-poetry.lock
-.pdm-python
-.pdm-build/
-
-# pyenv
-.python-version
 
 # ========================================================================
-# BUILD / PACKAGING
-# ========================================================================
-build/
-dist/
-wheels/
-.eggs/
-*.egg-info/
-*.egg
-MANIFEST
-develop-eggs/
-parts/
-sdist/
-var/
-share/python-wheels/
-
-# PyInstaller
-*.manifest
-*.spec
-
-# ========================================================================
-# JUPYTER NOTEBOOKS
+# Jupyter notebook artifacts
 # ========================================================================
 .ipynb_checkpoints/
 */.ipynb_checkpoints/
-.jupyter/
 
 # ========================================================================
-# UNIT TEST / COVERAGE
+# Build / packaging
 # ========================================================================
-.tox/
-.nox/
-.pytest_cache/
-.coverage
-.coverage.*
-htmlcov/
-coverage.xml
-nosetests.xml
-*.cover
-*.py.cover
+build/
+dist/
+.eggs/
+wheels/
+pip-wheel-metadata/
 
 # ========================================================================
-# DATA / ML / LLM WORKFLOWS
+# Project-specific ignores for llm-quant-guardrail
 # ========================================================================
+results/
+tmp/
+temp/
+scratch/
+logs/
+*.log
+
+# Guardrail checkpoints, model outputs, and temporary artifacts
+checkpoints/
+model_outputs/
+eval_tmp/
+eval_cache/
+guardrail_cache/
+
+# Example or intermediate files
+example_output.txt
+example_input.txt
+
+# Data files (local-only)
 data/
-datasets/
-*/data/
-*/datasets/
-
 *.csv
-*.tsv
 *.jsonl
 *.parquet
 *.pickle
 *.pkl
-*.feather
-*.h5
-*.hdf5
-
-# Model artifacts
-models/
-checkpoints/
-artifacts/
-model_outputs/
-logs/
-*.log
-
-# Evaluation caches
-evals/cache/
-evals/.cache/
-evals/tmp/
-*/cache/
-*/.cache/
-*/tmp/
-
-# Temp files
-tmp/
-temp/
-scratch/
-*.tmp
 
 # ========================================================================
-# IDE / EDITOR SETTINGS
+# IDE / Editor settings
 # ========================================================================
 .vscode/
 .idea/
 *.swp
 *.swo
-*~
-.#*
-
-# ========================================================================
-# PROJECT-SPECIFIC EXAMPLES
-# ========================================================================
-example_*.txt
-examples/
 
